@@ -77,7 +77,7 @@ navbar:
         Archives: /archives
         Categories: /categories
         Tags: /tags
-        # Draft: /draft
+        #Draft: /draft
         #Album: /album
         #Friend: /friend
         #Message: /message
