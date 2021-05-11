@@ -14,7 +14,7 @@ $(function () {
             rows.splice(0,1);
             var text=rows.join('\n');
             var html = '<li class="time-axis-item">' +
-                '<div class="time-axis-date">' + time + '</div>' +
+                '<div class="time-axis-date">' + time + '<span></span></div>' +
                 '<div class="time-axis-text">' + marked(text) + '</div>' +
                 '</li>';
             $('.time-axis').append(html);
