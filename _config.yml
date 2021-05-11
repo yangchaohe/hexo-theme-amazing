@@ -77,7 +77,10 @@ navbar:
         Archives: /archives
         Categories: /categories
         Tags: /tags
-        # Markmap: /markmap
+        MindMap: /mindmap
+        MyLife: /life
+        Read: /read
+        About: /about
         #Album: /album
         #Friend: /friend
         #Message: /message
@@ -285,7 +288,7 @@ widgets:
         # Names and URLs of the sites
         links:
             Hexo: 'https://hexo.io'
-            Bulma: 'https://bulma.io'
+            # Bulma: 'https://bulma.io'
     # Latest comment widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -376,7 +379,7 @@ plugins:
     katex: false
     # Enable the MathJax math typesetting support
     # https://www.mathjax.org/
-    mathjax: false
+    mathjax: true
     # Enable the Outdated Browser plugin
     # http://outdatedbrowser.com/
     outdated_browser: false
