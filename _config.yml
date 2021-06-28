@@ -237,6 +237,11 @@ sidebar:
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
     # Table of contents widget configurations
+    - 
+        position: right
+        type: notice
+        contents: 
+            1: 2021.6.28 公告测试
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
@@ -281,13 +286,13 @@ widgets:
                 #url: /atom.xml
         has_hitokoto: true
     # Recommendation links widget configurations
-    -
+    #-
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: links
+    #    position: left
+    #    type: links
         # Names and URLs of the sites
-        links:
-            Hexo: 'https://hexo.io'
+    #    links:
+    #        Hexo: 'https://hexo.io'
             # Bulma: 'https://bulma.io'
     # Latest comment widget configurations
     -
@@ -300,35 +305,34 @@ widgets:
         position: right
         type: recent_posts
     # Categories widget configurations
-    -
+    #-
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: categories
+    #    position: right
+    #    type: categories
     # Archives widget configurations
-    -
+    #-
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: archives
+    #    position: right
+    #    type: archives
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: tags
     # Google FeedBurner email subscription widget configurations
-    -
+    #-
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: subscribe_email
+    #    position: right
+    #    type: subscribe_email
         # Hint text under the email input
-        description: 
+    #    description: 
         # Feedburner ID
-        feedburner_id: ''
+    #    feedburner_id: ''
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: adsense
-
 # AdSense client ID
 adsense_client_id: #'ca-pub-6343805421927634'
 # AdSense AD unit ID

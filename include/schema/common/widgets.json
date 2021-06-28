@@ -51,6 +51,9 @@
             },
             {
                 "$ref": "/widget/recommend_post.json"
+            },
+            {
+                "$ref": "/widget/notice.json"
             }
         ],
         "required": [

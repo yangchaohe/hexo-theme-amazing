@@ -46,10 +46,9 @@ module.exports = class extends Component {
             md5Id = _get_md5(id);
         }
         // add by manu2x
-        const mermaid = page.mermaid;
+        const mermaid = config.mermaid ? page.mermaid: false;
 
         return <Fragment>
-            {/* mermaid */}
             {mermaid ?  
                 <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'>
                 </script>
@@ -218,6 +217,7 @@ module.exports = class extends Component {
             {!index ? <AdsenseX config={config} display={comment_head_has_ad}/> : null}
             {/* Comment */}
             {!index ? <Comment config={config} page={page} helper={helper} /> : null}
+            {/* mermaid */}
         </Fragment>;
     }
 };
