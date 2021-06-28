@@ -60,8 +60,9 @@ module.exports = class extends Component {
                 }
             }
         };`;
+        
 
-        return <Fragment>
+        return <Fragment>       
             <script src={cdn('moment', '2.22.2', 'min/moment-with-locales.min.js')}></script>
             {clipboard && <script src={cdn('clipboard', '2.0.4', 'dist/clipboard.min.js')} async></script>}
             <script dangerouslySetInnerHTML={{ __html: `moment.locale("${language}");` }}></script>

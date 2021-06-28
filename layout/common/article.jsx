@@ -38,15 +38,27 @@ module.exports = class extends Component {
         const isPost = page.layout == 'post';
 
         const isGitalk = comment !== undefined && comment.type !== undefined && comment.type == 'gitalk';
-        const showComment = true;//comment !== undefined && comment.type !== undefined && (comment.type == 'gitalk' || comment.type == 'valine');
+        const showComment = page.comment ? page.comment : true; //comment !== undefined && comment.type !== undefined && (comment.type == 'gitalk' || comment.type == 'valine');
         var id = _get_md5(_get_path_end_str(page.path, page.uniqueId, page.title));
         var md5Id = id;
         if (!isGitalk) {
             id = "/" + page.path;
             md5Id = _get_md5(id);
         }
+        // add by manu2x
+        const mermaid = page.mermaid;
 
         return <Fragment>
+            {/* mermaid */}
+            {mermaid ?  
+                <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'>
+                </script>
+                //<script>
+                  //  if (window.mermaid) {
+                    //    mermaid.initialize({theme: 'forest'});
+                    //}
+                //</script> 
+                : null }
             {(indexAt != undefined & indexAt == 0) ? <AdsenseX config={config} display={index_zero_position_ad}/> : null}
             {!index ? <AdsenseX config={config} display={article_head_has_ad}/> : null}
             {/* Main content */}
