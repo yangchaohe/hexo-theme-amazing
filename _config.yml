@@ -74,12 +74,12 @@ navbar:
     # Naviagtion menu items
     menu:
         Home: /
-        Archives: /archives
         Categories: /categories
+        Archives: /archives
         Tags: /tags
         MindMap: /mindmap
-        MyLife: /life
         Read: /read
+        MyLog: /life
         About: /about
         #Album: /album
         #Friend: /friend
