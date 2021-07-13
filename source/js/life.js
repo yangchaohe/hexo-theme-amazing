@@ -3,12 +3,12 @@ $(function () {
     $.get("../life/life.md", function parsMd(data){
         // 从##划分
         var md = window.markdownit({
-                     html:         false,        // 在源码中启用 HTML 标签
+                     html:         true,        // 在源码中启用 HTML 标签
                      xhtmlOut:     false,        // 使用 '/' 来闭合单标签 （比如 <br />）。
                                                  // 这个选项只对完全的 CommonMark 模式兼容。
                      breaks:        true,        // 转换段落里的 '\n' 到 <br>。
                      langPrefix:   'language-',  // 给围栏代码块的 CSS 语言前缀。对于额外的高亮代码非常有用。
-                     linkify:      false,        // 将类似 URL 的文本自动转换为链接。
+                     linkify:      true,        // 将类似 URL 的文本自动转换为链接。
 
                      // 启用一些语言中立的替换 + 引号美化
                      typographer:  false,
@@ -29,12 +29,13 @@ $(function () {
         data.pop();
         data.shift();
         $.each(data, (i,e) => {
+            //console.log(data);
             var re=/.+/g;
             var rows=e.match(re);
             var time = rows[0];//.match(/[\d-]{4,}/);
             rows.splice(0,1);
             var text=rows.join('\n');
-            console.log(text);
+            
             //console.log(marked(rows.join('')));
             //var text=rows.map((x)=>{marked(x)});
             //console.log(rows);
